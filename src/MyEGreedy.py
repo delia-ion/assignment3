@@ -24,7 +24,8 @@ class MyEGreedy:
         return best_action
 
     def get_egreedy_action(self, agent, maze, q_learning, epsilon):
-        if np.random.random() < epsilon:
-            return self.get_random_action(agent, maze)
-        else:
-            return self.get_best_action(agent, maze, q_learning)
+         if np.random.random() < epsilon:
+             return self.get_random_action(agent, maze)
+         else:
+             return self.get_best_action(agent, maze, q_learning)
+
