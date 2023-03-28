@@ -37,6 +37,10 @@ class Maze:
             sys.exit()
         print("Ready reading maze file " + file)
         self.rewards = {}
+        for row in self.states:
+            for state in row:
+                if self.is_walkable(state):
+                    self.rewards[state] = -0.3
 
     def is_walkable(self, state):
         # the maze's way to check if you can walk on a particular state
